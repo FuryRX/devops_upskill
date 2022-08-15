@@ -1,0 +1,11 @@
+Day 1
+Read about K3d.
+Youtube video about K3d.
+Read K3d Official Documentations.
+Installed Docker for Mac,K3d cli and kubectl
+k3d cluster create mycluster
+k3d delete mycluster delete
+
+Notes
+- K3d is just K3s which is lightweight kubernetes running in docker.
+- PreReqs :Docker mac, K3d cli
