@@ -16,3 +16,9 @@ Youtube Video about Argo CD
 Spin up 2 worker Nodes
 Install Argo CD
 
+Notes
+- Argo CD is a continous delivery tool
+- Unlike other CD tools that uses push method, Argo uses a Pull method from inside the K8s cluster
+- Any manual changes done on the K8s cluster will be overwritten by git repo. Options for alert instead of auto overwrite.
+- Changes documented in version control history
+
