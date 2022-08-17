@@ -9,3 +9,10 @@ k3d delete mycluster delete
 Notes
 - K3d is just K3s which is lightweight kubernetes running in docker.
 - PreReqs :Docker mac, K3d cli
+
+Day 2
+Read about Argo CD
+Youtube Video about Argo CD
+Spin up 2 worker Nodes
+Install Argo CD
+
