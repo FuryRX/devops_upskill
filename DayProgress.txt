@@ -27,3 +27,4 @@ Install ArgoCD
 - Get admin password with argo cd secret and decode with base64
 - Create Sample deployment with nginx and replicas
 - Push to git so argo cd can pull
+- Troubleshooting App not syncing
