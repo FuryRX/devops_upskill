@@ -13,8 +13,7 @@ Notes
 Day 2
 Read about Argo CD
 Youtube Video about Argo CD
-Spin up 2 worker Nodes
-Install Argo CD
+Spin up 1 worker Nodes
 
 Notes
 - Argo CD is a continous delivery tool
@@ -22,3 +21,7 @@ Notes
 - Any manual changes done on the K8s cluster will be overwritten by git repo. Options for alert instead of auto overwrite.
 - Changes documented in version control history
 
+Day 3
+Install ArgoCD
+- Use portforward on 8080 to access ArgoCD 
+- Get admin password with argo cd secret and decode with base64
