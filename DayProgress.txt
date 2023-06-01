@@ -28,3 +28,12 @@ Install ArgoCD
 - Create Sample deployment with nginx and replicas
 - Push to git so argo cd can pull
 - Troubleshooting App not syncing
+
+Day 4
+Learn about ingress
+Traefik
+Install Helm on workstation, helm is a package manager
+Tiller no longer needs to be install in your K8s cluster as a pod in new Helm 3
+DELETED WHOLE CLUSTER AND WILL RE-CREATE FROM SCRATCH AGAIN.
+
+
