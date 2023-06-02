@@ -1,0 +1,8 @@
+Create a k3d cluster which is a lightweight kubernetes cluster inside docker 
+- k3d cluster create rootCluster
+
+The above command creates a cluster using docker containers and each container represents a node in the cluster
+3 Nodes gets created tools, root cluster server 1 and 2
+
+Now we will create a worker node and add it to our existing cluster rootCluster 
+- k3d node create rootWorker1 -c rootCluster

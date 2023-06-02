@@ -1,0 +1,13 @@
+Create a namespace for argocd to partition out your cluster to seperate applications
+- kubectl create namespace argocd
+
+Apply the install file in the git repo to our argocd namespace, it will create the service and application 
+- kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+Without exposing service you can set up a port forward. This needs to run everytime you want to access argocd
+- kubectl port-forward svc/argocd-server -n argocd 8080:443
+
+When the command is run you can now access argocd on localhost:8080
+
+To get the password and user. Username is admin and password you can retrieve with below command. Run as a new terminal
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
