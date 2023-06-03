@@ -5,4 +5,15 @@ The above command creates a cluster using docker containers and each container r
 3 Nodes gets created tools, root cluster server 1 and 2
 
 Now we will create a worker node and add it to our existing cluster rootCluster 
+- k3d create cluster rootCluster - p 9080:80@loadbalancer
+This creates a new cluster called rootCluster and maps it on the localhost port 9080
+To the load balancer port 80
+Allows you to access apps on port 9080 local machine
+
 - k3d node create rootWorker1 -c rootCluster
+Add a worker node to the rootCluster
+
+- kubectl cluster-info
+To check out cluster info
+
+

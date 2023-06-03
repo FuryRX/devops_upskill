@@ -1,0 +1,28 @@
+Inside echoserver folder theres a echoserver deployment
+This creates 3 replicas of echoserver containers on container port 8080
+
+- kubectl apply -f ./echoserverdeployment.yaml
+
+Now lets create a service to expose the app
+Inside echoserver folder theres a service yaml
+This will create a service, selector will choose the label that the service
+uses to select which pod to target
+Ports:
+ port: 80 specifies the service should listen on port 80
+ targetPort: 8080 specifies the port the target pods should forward to
+ protocol: TCP Which protocol used for the port
+
+- kubectl apply -f ./echoservice.yaml 
+
+Lets now expose the app externally. Atm with service its only accessible within the cluster
+We create a ingress controller with ssl redirect on false
+and routes incoming requests with the parth / root to backend service named echoserver on port 80
+ingress > svc port 80
+
+- kubectl apply -f ./echoserveringress.yaml
+
+curl http://localhost:9080
+This will show you what echoserver does, just shows you browser info
+Why 9080 because when we created our cluster we specified this
+Depending on what port you chose when creating the cluster to map it on your local host
+
