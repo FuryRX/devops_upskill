@@ -10,10 +10,17 @@ This creates a new cluster called rootCluster and maps it on the localhost port 
 To the load balancer port 80
 Allows you to access apps on port 9080 local machine
 
+Another command to create a cluster is
+- k3d create cluster devtron -port 8080:30080@agent:0 --agents 1
+Means port 8080 local maps to 30080 on cluster on first agent and 1 agent gets brought up
+
 - k3d node create rootWorker1 -c rootCluster
 Add a worker node to the rootCluster
 
 - kubectl cluster-info
 To check out cluster info
 
+info this command uses the current context to see which cluster to interact with
+no need to run
+- kubectl config use-context k3d-devtron-local-dev
 
